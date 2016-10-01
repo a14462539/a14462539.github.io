@@ -1,0 +1,90 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<meta name="description" content="智能社是一家专注于web前端开发技术的公司，目前主要提供JavaScript培训和HTML5培训两项服务，同时还推出了大量javascript基础知识教程，智能课堂为你带来全新的学习方法和快乐的学习体验。" />
+<title>智能社— http://www.zhinengshe.com</title>
+<style>
+*{ margin:0; padding:0; }
+#s{ width:550px; height:350px; border:1px solid red; position:relative; float:left; margin-left:20px; }
+#s img{ width:550px; height:350px; }
+#m{ position:absolute; left:0; top:0; width:120px; height:120px; background:rgba(255,255,0,0.5); display:none; }
+#b{ width:550px; height:350px; border:1px solid red; float:left; margin-left:20px; overflow:hidden; display:none; position:relative; }
+#b img{ position:absolute; left:0; top:0; }
+</style>
+<script>
+window.onload=function (){
+	var oS=document.getElementById('s');
+	var oM=document.getElementById('m');
+	var oB=document.getElementById('b');
+	var oImg=oB.children[0];
+	
+	oS.onmouseenter=function (){
+		oM.style.display='block';
+		oB.style.display='block';
+	};
+	oS.onmouseleave=function (){
+		oM.style.display='none';
+		oB.style.display='none';
+	};
+	
+	oS.onmousemove=function (ev){
+		var oEvent=ev||event;
+		var l=oEvent.clientX-oS.offsetLeft-oM.offsetWidth/2;
+		var t=oEvent.clientY-oS.offsetTop-oM.offsetHeight/2;
+		
+		if(l<0){
+			l=0;
+		}else if(l>(oS.offsetWidth-oM.offsetWidth)){
+			l=oS.offsetWidth-oM.offsetWidth;
+		}
+		if(t<0){
+			t=0;
+		}else if(t>(oS.offsetHeight-oM.offsetHeight)){
+			t=oS.offsetHeight-oM.offsetHeight;
+		}
+		
+		var scale=l/(oS.offsetWidth-oM.offsetWidth)*(oImg.offsetWidth-oB.offsetWidth);
+		var scale2=t/(oS.offsetHeight-oM.offsetHeight)*(oImg.offsetHeight-oB.offsetHeight);
+		
+		oImg.style.left=-scale+'px';
+		oImg.style.top=-scale2+'px';
+		
+		oM.style.left=l+'px';
+		oM.style.top=t+'px';
+	};
+};
+</script>
+</head>
+
+<body>
+	<div id="s">
+    	<img src="img/s.jpg" alt="" />
+    	<div id="m"></div>
+    </div>
+    <div id="b">
+    	<img src="img/b.jpg" alt="" />
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

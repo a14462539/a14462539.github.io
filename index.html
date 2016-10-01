@@ -15,7 +15,60 @@
 		<style type="text/css">
 			
 		</style>
+		<script src="js/move.js"></script>
 		<script type="text/javascript">
+			function getDir(obj,ev){
+				var x=obj.offsetLeft+obj.offsetWidth/2-ev.clientX;
+				var y=obj.offsetTop+obj.offsetHeight/2-ev.clientY;
+				
+				return Math.round((Math.atan2(y,x)*180/Math.PI+180)/90)%4;
+			}
+			
+			function through(obj){
+				var oS=obj.children[0];
+				
+				obj.onmouseenter=function (ev){
+					var oEvent=ev||event;
+					var dir=getDir(obj,oEvent);
+					switch(dir){
+						case 0:
+							oS.style.left=200+'px';
+							oS.style.top=0;
+							break;
+						case 1:
+							oS.style.left=0;
+							oS.style.top=200+'px';
+							break;
+						case 2:
+							oS.style.left=-200+'px';
+							oS.style.top=0;
+							break;
+						case 3:
+							oS.style.left=0;
+							oS.style.top=-200+'px';
+							break;
+					}
+					startMove(oS,{left:0,top:0});
+				};
+				obj.onmouseleave=function (ev){
+					var oEvent=ev||event;
+					var dir=getDir(obj,oEvent);
+					switch(dir){
+						case 0:
+							startMove(oS,{left:200,top:0});
+							break;
+						case 1:
+							startMove(oS,{left:0,top:200});
+							break;
+						case 2:
+							startMove(oS,{left:-200,top:0});
+							break;
+						case 3:
+							startMove(oS,{left:0,top:-200});
+							break;
+					}
+				};
+			}
 			;(function(win,doc){
 				function change(){
 					doc.documentElement.style.fontSize=20*doc.documentElement.clientWidth/320+'px';
@@ -201,6 +254,13 @@
 //					alert(document.documentElement.clientWidth)
 				},false)
 			},false);
+			window.onload=function (){
+				var aDiv2=document.querySelectorAll('#motion div');
+				
+				for(var i=0; i<aDiv2.length; i++){
+					through(aDiv2[i]);
+				}
+			};
 		</script>
 	</head>
 	<body>
@@ -264,9 +324,89 @@
 			</div>
 			
 		</div>
-		<div class="right-box right">
+		<div class="right-box right" id="briefing">
+			<h3>赵伟明 个人简历 </h3>   
+            <p>2年以上前端工作经验 </p>                       
+			<p>居住地：北京市</p>
+			<p>联系方式：18510509524(手机)</p>
+			<p>E-mail: ooo-999@163.com</p>
 			
-			个人简介
+			<h4>求职意向</h4>
+			<p>·工作性质： 全职</p>
+			<p>·期望职业： WEB前端开发、移动互联网开发</p>
+			<p>·期望行业： 互联网/电子商务、计算机软件、IT服务(系统/数据/维护)、计算机硬件及网络设备等等</p>
+			<p>·工作地区： 北京</p>
+			<p>·期望月薪： 面议</p>
+			<p>·目前状况： 离职，可即时到岗</p>
+			
+			<h4>自我评价</h4>
+			<p>1、熟练掌握div+css,html基本布局以及html5+css3新特性，根据设计图完成页面制作；</p>
+			<p>2、理解Web语义化，有良好的代码书写习惯，熟练使用Javascript编写高性能的代码，处理常见的浏览器bug问题； </p>
+			<p>3、熟悉响应式、百分比、rem等移动端布局，能适配各手机终端和系统；</p>
+			<p>4、熟悉W3C标准，熟悉多浏览器兼容技术；</p>
+			<p>5、熟练应用Photoshop切图工具软件。熟练使用Illustrator等设计软件；</p>
+			<p>6、熟练使用Chrome  developer Tools， FireBug调试js和css代码；</p>
+			<p>7、熟悉jQuery流行前端框架，了解bootstrap、angularJS前端框架，了解JS面向对象编程思想； </p>
+			<p>8、熟悉Ajax、jsonp等交互技术；</p>
+			<p>9、有Git、SVN、gulp、grunt等代码管理工具的使用经验；</p>
+			<p>10、具有良好的学习能力和独立解决问题的能力，能承受一定工作压力，在指定时间内完成高质量程序；</p>
+			<p>11、热爱设计编写程序，有良好的团队合作精神和较强的沟通意识。</p>
+			
+			<h4>工作经历</h4>
+			
+			<p>百应科技（北京）有限公司| 前端工程师</p>
+			<p>2015/11—2016/07</p>
+			<p>1.按照原型设计，开发Web前端代码，利用ajax等技术与后台工程师完成数据交互。</p>
+			<p>2.用原生javascript实现各种动态效果，并解决各浏览器的兼容问题。</p>
+			<p>3.编写活动页面，javascript组件。</p>
+			<p>4.持续的优化相关的产品的质量、性能、用户体验。</p>
+			 
+			<p>北京集美家居市场集团有限公司 | 前端工程师</p>
+			<p>2014/05—2015/10</p>
+			<p>1.负责网站页面的排版、动态交互效果的编写</p>
+			<p>2.负责对完成的页面进行维护和对网站前端性能作相应的优化</p>
+			<p>3.负责日常网站前端开发的维护及新项目的开发</p>
+			<p>4.了解HTML5和CSS3能使用Zepto、Iscroll等移动端框架开发跨平台移动应用</p>
+				
+			<h4>项目经验</h4>
+			
+			<p>项目一：</p>
+			<p>项目名称：集美家居官网</p>
+			<p>项目链接：http://www.jimei.com.cn/</p>
+			<p>责任描述：</p>
+			<p>1、和UI以及产品商讨网站的构成以及具体效果；</p>
+			<p>2、使用HTML和CSS进行效果图的还原；</p>
+			<p>3、负责网站内浏览器兼容问题的解决和Ajax的异步跨域请求；</p>
+			<p>4、负责网站中一些Javascript脚本的编写；</p>
+			<p>5、网站的优化，以及后期维护并改版。</p>
+			<p>项目描述：</p>
+			<p>集美家居网是一个线下商品展示的网站，分为家具、建材、家饰、家装4个模块。用户可以通过搜索检索期望的商品，可以在线查看商品详情。
+			负责运用photoshop软件进行网站效果图切割，运用dreamweaver等软件进行网站代码的编写，调整后期编程中css样式出现的错误等。主要用到css、html技术来实现页面布局，通过jquery实现动态效果，前端和后台通过ajax实现异步交互。</p>
+			
+			<p>项目二：</p>
+			<p>项目名称：百应-10000知道</p>
+			<p>项目链接：http://xj.zhidao.189.cn/</p>
+			<p>责任描述：</p>
+			<p>1、负责此网站相关页面的编写；</p>
+			<p>2、负责网站内浏览器兼容问题的解决和Ajax的异步跨域请求；</p>
+			<p>3、负责网站中一些Javascript脚本的编写；</p>
+			<p>4、负责代码的后期维护。</p>
+			<p>项目描述：</p>
+			<p>10000知道，是中国电信集团公司推出的首个面向客户自助、互助开放式电信客服知识搜索门户。
+			负责运用photoshop软件进行网站效果图切割，运用dreamweaver软件进行网站代码的编写，调整后期编程中css样式出现的错误等。主要用到css、html技术来实现页面布局，首页大量的商品图片需要用到图片的预处理和懒加载，通过jquery实现动态效果，前端和后台通过ajax实现异步交互。</p>
+			
+			<p>项目三：</p>
+			<p>项目名称：嘉善易都电子商务有限公司</p>
+			<p>责任描述：</p>
+			<p>实现静态页面以及动态效果，使用原生 JavaScript 编写页面的动态效果。</p>
+			<p>项目描述：</p>
+			<p>1.负责平台首页报名页面等从设计稿到静态页面的转换。</p>
+			<p>2.运用JavaScript和jQuery还原特性，首页轮播图、选项卡等的实现。</p>
+			<p>3.运用Ajax和后台进行交互，完成数据的展现；</p>
+			
+			<h4>教育经历</h4>
+			<p>2005/09 –2008/06 </p>
+			<p>吉林市北华大学| 计算机应用| 大专 </p>
 		</div>
 		<div class="right-box right">
 			联系我
@@ -288,12 +428,19 @@
 			<div><a href="https://a14462539.github.io/mls/index5.html"><img src="images/mls.png"/></a></div>
 			<div><a href="https://a14462539.github.io/ty/index.html"><img src="images/ty.png"/></a></div>
 		</div>
-		<div class="right-box tab">
-			<div>放大镜</div>
-			<div>瀑布流</div>
-			<div>链式运动</div>
-			<div>无缝滚动</div>
-			<div>分块运动</div>
+		<div class="right-box tab" id="motion">
+			<div><span><a href="">放大镜</a></span></div>
+			<div><span><a href="">瀑布流</a></span></div>
+			<div><span><a href="">链式运动</a></span></div>
+			<div><span><a href="">无缝滚动</a></span></div>
+			<div><span><a href="">分块运动</a></span></div>
+			<div><span><a href="">手风琴</a></span></div>
+			<div><span><a href="">碰撞+拖拽</a></span></div>
+			<div><span><a href="">官网分页</a></span></div>
+			<div><span><a href="">苹果菜单</a></span></div>
+			<div><span><a href="">圆</a></span></div>
+			<div><span><a href="">自增</a></span></div>
+			<div><span><a href="">3D图片轮换</a></span></div>
 		</div>
 		<div class="right-box tab">
 			
