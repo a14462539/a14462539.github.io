@@ -1,0 +1,654 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/main.css" />
+<script>
+	function bbb(a,b,c,d,f){
+		var oYs1_lul = document.getElementById(a);
+		var oYs1_limg = oYs1_lul.getElementsByTagName(b);
+		var oYs1_bul = document.getElementById(c);
+		var oYs1_btn = oYs1_bul.getElementsByTagName(d);
+		
+		for(var i=0;i<oYs1_btn.length;i++){
+			oYs1_btn[i].cba = i;
+			oYs1_btn[i].onmouseover = function(){
+				for(var i=0;i<oYs1_btn.length;i++){
+					oYs1_btn[i].className = '';
+					oYs1_limg[i].style.display = 'none';
+				}
+				this.className = f;
+				oYs1_limg[this.cba].style.display = 'block';
+			}
+		}
+	}
+	window.onload = function(){
+		 bbb('ys1_limg','a','ys1_lbtn','li','ys1_l_btn1');
+		 bbb('ys1_rbnr','div','ys1_nav','li','ys1_head_li2');
+		 bbb('ys4_playnr','div','ys4_play','li','ys4_play_li');
+		 bbb('ys4_meiti','div','ys4_meitinr','li','ys4_play_li');
+		 bbb('ys4_videoul','div','ys4_video_h','li','ys4_play_li');
+		 
+	}
+</script>
+</head>
+
+<body>
+	<div class="ys_bg">
+        <div class="head_box">
+            <div class="head">
+                <h1 class="logo"><a href="#"></a></h1>
+                <ul class="head_ul clearfix">
+                    <li>
+                        <a href="#">客服</a>
+                        <em></em>
+                    </li>
+                    <li>
+                        <a href="#">畅游全服务</a>
+                        <em></em>
+                    </li>
+                    <li>
+                        <a href="#">畅游全游戏</a>
+                        <em></em>
+                    </li>
+                </ul>
+                <p class="head_p clearfix">
+                    <a href="#" class="head_pa1"><i></i>注册</a>
+                    <a href="#" class="head_pa2"><i></i>充值</a>
+                    <a href="#" class="head_pa3"><i></i>畅游+</a>
+                </p>
+            </div>
+        </div>
+        <div class="top">
+            <div class="top_bg">
+                <h2 class="top_h2"><a href="#"></a></h2>
+                <div class="top_navbtn">
+                	<ul id="nav_btn">
+                    	<li class="top_sy"><a href="#" class="top_btn"></a></li>
+                        <li class="top_xinwen top_active" title="详情">
+                        	<a href="#" class="top_btn"></a>
+                        	<p class="xinwen_btn">
+                            	<a href="#">游戏新闻</a>
+                                <a href="#">官方公告</a>
+                            </p>
+                        </li>
+                        <li><a href="#" class="top_btn"></a></li>
+                        <li class="top_xinshou top_active" title="详情">
+                        	<a href="#" class="top_btn"></a>
+                        	<p class="xinwen_btn xinshou_btn">
+                            	<a href="#">新手指南</a>
+                                <a href="#">职业专题</a>
+                                <a href="#">资料站</a>
+                                <a href="#">常见问题</a>
+                            </p>
+                        </li>
+                        <li><a href="#" class="top_btn"></a></li>
+                        <li><a href="#" class="top_btn"></a></li>
+                        <li class="top_shijue top_active" title="详情">
+                        	<a href="#" class="top_btn"></a>
+                            <p class="xinwen_btn">
+                            	<a href="#">游戏视频</a>
+                                <a href="#">壁纸截图</a>
+                            </p>
+                        </li>
+                        <li class="top_hudong"><a href="#" class="top_btn"></a></li>
+                        <li class="top_kehu"><a href="#" class="top_btn"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="top_dianzan"></a>
+        </div>
+        <div class="ys_nr">
+            <div class="ys1_box clearfix">
+                <div class="ys1_l">
+                    <ul class="ys1_ltul clearfix">
+                        <li class="ys1_xiazai"><a href="#"></a></li>
+                        <li class="ys1_zhuce"><a href="#"></a></li>
+                        <li class="ys1_chongzhi"><a href="#"></a></li>
+                        <li class="ys1_yuehuan"><a href="#"></a></li>
+                        <li class="ys1_xinshou"><a href="#"></a></li>
+                    </ul>
+                    <div class="ys1_l_b">
+                   	  <p class="ys1_l_bimg" id="ys1_limg">
+                        	<a href="#" class="ys1_l_active"><img src="img/main_a1 (1).jpg" /></a>
+                            <a href="#"><img src="img/main_a1 (2).jpg" /></a>
+                            <a href="#"><img src="img/main_a1 (3).jpg" /></a>
+                            <a href="#"><img src="img/main_a1 (4).jpg" /></a>
+                            <a href="#"><img src="img/main_a1 (5).jpg" /></a>
+                        </p>
+                        <ul class="ys1_l_bul" id="ys1_lbtn">
+                          	<li class="ys1_l_btn1"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <a href="#" class="ys1_l_guanfang">官 方</a>
+                        <a href="#" class="ys1_l_meiti">媒体</a>
+                    </div>
+                </div>
+                <div class="ys1_r">
+                    <div class="ys1_rt">
+                        <p>电信一区<a href="#">【元素殿堂】</a>欢迎入驻!</p>
+                        <p>电信一区<a href="#">【元素殿堂】</a>欢迎入驻!</p>
+                    </div>
+                    <div class="ys1_rc">
+                        <div class="ys1_rc_guanzhu">
+                            <p>距您上次访问有<a href="#">200</a>条更新</p>
+                            <i class="ys1_rc_jiahao"></i>
+                            <a href="#" class="ys1_rc_weixin"></a>
+                            <a href="#" class="ys1_rc_xinlang"></a>
+                            <a href="#" class="ys1_rc_weibo"></a>
+                        </div>
+                        <ul class="ys1_rb_head" id="ys1_nav">
+                            <li><a href="#">综合</a></li>
+                            <li class="ys1_head_li2"><a href="#">新闻</a></li>
+                            <li><a href="#">公告</a></li>
+                            <li><a href="#">媒体</a></li>
+                        </ul>
+                        <div class="ys1_rb_news" id="ys1_rbnr">
+                        	<div class="ys1_rb_nr">
+                                <h4 class="ys1_rb_h4"><a href="#">全新Raid暗黑城堡 今日决战开启</a></h4>
+                                <ol class="ys1_rb_ol">
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】年度大版今日开启 新职业新战场震撼上线</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】年度大版今日开启 新职业新战场震撼上线</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】年度大版今日开启 新职业新战场震撼上线</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】年度大版今日开启 新职业新战场震撼上线</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】年度大版今日开启 新职业新战场震撼上线</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】年度大版今日开启 新职业新战场震撼上线</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="ys1_rb_more clearfix">
+                                        <a href="#">更多信息></a>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div>
+                                <h4 class="ys1_rb_h4"><a href="#">全新Raid暗黑城堡 今日决战开启</a></h4>
+                                <ol class="ys1_rb_ol">
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】揭秘术士进化史 多张设计稿曝光</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】揭秘术士进化史 多张设计稿曝光</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】揭秘术士进化史 多张设计稿曝光</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】揭秘术士进化史 多张设计稿曝光</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】揭秘术士进化史 多张设计稿曝光</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】揭秘术士进化史 多张设计稿曝光</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="ys1_rb_more clearfix">
+                                        <a href="#">更多信息></a>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div>
+                                <h4 class="ys1_rb_h4"><a href="#">全新Raid暗黑城堡 今日决战开启</a></h4>
+                                <ol class="ys1_rb_ol">
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】年度大版今日开启 新职业新战场震撼上线</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】年度大版今日开启 新职业新战场震撼上线</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】年度大版今日开启 新职业新战场震撼上线</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】年度大版今日开启 新职业新战场震撼上线</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】年度大版今日开启 新职业新战场震撼上线</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】年度大版今日开启 新职业新战场震撼上线</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="ys1_rb_more clearfix">
+                                        <a href="#">更多信息></a>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div>
+                                <h4 class="ys1_rb_h4"><a href="#">全新Raid暗黑城堡 今日决战开启</a></h4>
+                                <ol class="ys1_rb_ol">
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】揭秘术士进化史 多张设计稿曝光</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】揭秘术士进化史 多张设计稿曝光</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】揭秘术士进化史 多张设计稿曝光</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】揭秘术士进化史 多张设计稿曝光</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】揭秘术士进化史 多张设计稿曝光</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="clearfix">
+                                        <a href="#">【新闻】揭秘术士进化史 多张设计稿曝光</a>
+                                        <span>04/03</span>                                
+                                    </li>
+                                    <li class="ys1_rb_more clearfix">
+                                        <a href="#">更多信息></a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="ys2_box clearfix">
+            	<li><a href="#"><img src="img/main_a2.jpg" /></a></li>
+                <li><a href="#"><img src="img/main_a2 (2).jpg" /></a></li>
+                <li><a href="#"><img src="img/main_a2 (1).jpg" /></a></li>
+                <li><a href="#"><img src="img/main_a22.jpg" /></a></li>
+            </ul>
+            <div class="ys3_box clearfix">
+            	<div class="ys3_l">
+                	<ul class="ys3_lt" id="ys3_tzhiye">
+                    	<li class="ys3_lt_1 " ></li>
+                        <li class="ys3_lt_2 active"></li>
+                        <li class="ys3_lt_3"></li>
+                        <li class="ys3_lt_4"></li>
+                        <li class="ys3_lt_5"></li>
+                        <li class="ys3_lt_6"></li>
+                    </ul>
+                    <div class="y3_zhiye" id="ys3_bzhiye">
+                    	<div class="ys3_zhiye_hover"><a href="#"><img src="img/shushi.jpg" /></a></div>
+                    	<div><a href="#"><img src="img/shenshe.jpg" /></a></div>
+                        <div><a href="#"><img src="img/shouhu.jpg" /></a></div>
+                        <div><a href="#"><img src="img/mofa.jpg" /></a></div>
+                        <div><a href="#"><img src="img/zhanshi.jpg" /></a></div>
+                        <div><a href="#"><img src="img/cike.jpg" /></a></div>
+                    </div>
+                </div>
+                <div class="ys3_r">
+                	<h4 class="ys3_rh4">活动中心</h4>
+                    <div class="ys3_rimg">
+                    	<a href="#"><img src="img/1.jpg" /></a>
+                        <p class="clearfix">
+                        	<i>女武神的秘宝</i>
+                            <span>共 7,294,712人关注 </span>
+                        </p>
+                    </div>
+                    <ol class="ys3_rol">
+                    	<li>
+                        	<a href="#">神谕者的成长礼</a>
+                            <span>进行中</span>
+                        </li>
+                        <li>
+                        	<a href="#">神谕者的成长礼</a>
+                            <span>进行中</span>
+                        </li>
+                        <li>
+                        	<a href="#">神谕者的成长礼</a>
+                            <span>进行中</span>
+                        </li>
+                        <li>
+                        	<a href="#">神谕者的成长礼</a>
+                            <span>进行中</span>
+                        </li>
+                        <li>
+                        	<a href="#">神谕者的成长礼</a>
+                            <span>进行中</span>
+                        </li>
+                        <li>
+                        	<a href="#">神谕者的成长礼</a>
+                            <span>进行中</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="ys4_box">
+            	<div class="ys4_l">
+                	<div class="ys4_lt">
+                    	<h3 class="ys4_lth3">快捷入口</h3>
+                        <div class="ys4_lt_rukou">
+                        	<p>
+                            	<a href="#">·账号管理</a>
+                                <a href="#">·兑换中心</a>
+                            </p>
+                            <p>
+                            	<a href="#">·账号安全</a>
+                                <a href="#">·畅游知道</a>
+                            </p>
+                            <p>
+                            	<a href="#">·BUG提交</a>
+                                <a href="#">·客户端FAQ</a>
+                            </p>
+                            <p>
+                            	<a href="#">·玩家社区</a>
+                                <a href="#">·加速器下载</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ys4_limg">
+                    	<a href="#" class="ys4_limg_btnl"></a>
+                        <a href="#" class="ys4_limg_btnr"></a>
+                    	<ul>
+                        	<li><a href="#"><img src="img/main_a3_1.jpg" /></a></li>
+                        </ul>
+                    </div>
+                    <div class="ys4_b_mtbox">
+                    	<div class="ys4_b_mt">媒体合作专区</div>
+                        <div class="ys4_b_xiala">
+                        	<a href="#">17173</a>
+                            <a href="#">多玩</a>
+                            <a href="#">太平洋</a>
+                            <a href="#">电玩巴士</a>
+                            <a href="#">新浪</a>
+                            <a href="#">搜狐</a>
+                           	<a href="#">百度</a>
+                        </div>
+                    </div>
+                    <div class="ys4_l_diaocha">
+                    	<a href="#"></a>
+                    </div>
+                </div>
+                <div class="ys4_r">
+                	<div class="ys4_rt clearfix">
+                    	<div class="ys4_player">
+                        	<h4 class="ys4_playerh4">玩家交流</h4>
+                            <ul class="ys4_playhead clearfix" id="ys4_play">
+                            	<li class="ys4_play_li"><a href="#">玩家攻略</a></li>
+                                <li><a href="#">论坛热帖</a></li>
+                                <li><a href="#">社区精华</a></li>
+                            </ul>
+                            <div class="ys4_player_nr clearfix" id="ys4_playnr">
+                            	<div class="ys4_player_div">
+                                    <p class="ys4_player_nrl">
+                                        <a href="#"><img src="img/wj.jpg" /></a>
+                                    </p>
+                                    <ul class="ys4_player_nrul">
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    </ul>
+                                    <a href="#" class="ys4_player_morebtn">更多信息></a>
+                                </div>
+                                <div>
+                                    <p class="ys4_player_nrl">
+                                        <a href="#"><img src="img/wj.jpg" /></a>
+                                    </p>
+                                    <ul class="ys4_player_nrul">
+                                        <li><a href="#">·屌丝逆袭 大神成长计划开启</a></li>
+                                        <li><a href="#">·屌丝逆袭 大神成长计划开启</a></li>
+                                        <li><a href="#">·屌丝逆袭 大神成长计划开启</a></li>
+                                        <li><a href="#">·屌丝逆袭 大神成长计划开启</a></li>
+                                        <li><a href="#">·屌丝逆袭 大神成长计划开启</a></li>
+                                        <li><a href="#">·屌丝逆袭 大神成长计划开启</a></li>
+                                        <li><a href="#">·屌丝逆袭 大神成长计划开启</a></li>
+                                        <li><a href="#">·屌丝逆袭 大神成长计划开启</a></li>
+                                    </ul>
+                                    <a href="#" class="ys4_player_morebtn">更多信息></a>
+                                </div>
+                                <div>
+                                    <p class="ys4_player_nrl">
+                                        <a href="#"><img src="img/wj.jpg" /></a>
+                                    </p>
+                                    <ul class="ys4_player_nrul">
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    </ul>
+                                    <a href="#" class="ys4_player_morebtn">更多信息></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ys4_yxzl">
+                        	<h4 class="ys4_playerh4">游戏资料</h4>
+                            <div class="ys4_yxzl_b">
+                            	<dl>
+                                    <dt>新手入门<i></i></dt>
+                                    <dd><a href="#">注册账号</a> | <a href="#"S>下载游戏</a> | <a href="#">登录游戏</a></dd>
+								</dl>
+                                <dl>
+                                    <dt>新手入门<i></i></dt>
+                                    <dd><a href="#">注册账号</a> | <a href="#"S>下载游戏</a> | <a href="#">登录游戏</a></dd>
+								</dl>
+                                <dl>
+                                    <dt>新手入门<i></i></dt>
+                                    <dd><a href="#">注册账号</a> | <a href="#"S>下载游戏</a> | <a href="#">登录游戏</a></dd>
+								</dl>
+                                <dl class="ys4_yxzl_lastdl">
+                                    <dt>新手入门<i></i></dt>
+                                    <dd><a href="#">注册账号</a> | <a href="#"S>下载游戏</a> | <a href="#">登录游戏</a></dd>
+								</dl>
+                                <a href="#" class="ys4_player_ziliao">进入资料站</a>
+                            </div>
+                        </div>
+                	</div>
+                    <div class="ys4_rb clearfix">
+                    	<div class="ys4_player">
+                        	<h4 class="ys4_playerh4">媒体专区</h4>
+                            <ul class="ys4_playhead clearfix" id="ys4_meitinr">
+                            	<li class="ys4_play_li"><a href="#">17173</a></li>
+                                <li><a href="#">新浪爱问</a></li>
+                                <li><a href="#">太平洋游戏</a></li>
+                            </ul>
+                            <div class="ys4_player_nr clearfix" id="ys4_meiti">
+                            	<div class="ys4_player_div">
+                                    <p class="ys4_player_nrl">
+                                        <a href="#"><img src="img/wj.jpg" /></a>
+                                    </p>
+                                    <ul class="ys4_player_nrul">
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    </ul>
+                                    <a href="#" class="ys4_player_morebtn">更多信息></a>
+                                </div>
+                                <div>
+                                    <p class="ys4_player_nrl">
+                                        <a href="#"><img src="img/wj.jpg" /></a>
+                                    </p>
+                                    <ul class="ys4_player_nrul">
+                                        <li><a href="#">·屌丝逆袭 大神成长计划开启</a></li>
+                                        <li><a href="#">·屌丝逆袭 大神成长计划开启</a></li>
+                                        <li><a href="#">·屌丝逆袭 大神成长计划开启</a></li>
+                                        <li><a href="#">·屌丝逆袭 大神成长计划开启</a></li>
+                                        <li><a href="#">·屌丝逆袭 大神成长计划开启</a></li>
+                                        <li><a href="#">·屌丝逆袭 大神成长计划开启</a></li>
+                                        <li><a href="#">·屌丝逆袭 大神成长计划开启</a></li>
+                                        <li><a href="#">·屌丝逆袭 大神成长计划开启</a></li>
+                                    </ul>
+                                    <a href="#" class="ys4_player_morebtn">更多信息></a>
+                                </div>
+                                <div>
+                                    <p class="ys4_player_nrl">
+                                        <a href="#"><img src="img/wj.jpg" /></a>
+                                    </p>
+                                    <ul class="ys4_player_nrul">
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                        <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    </ul>
+                                    <a href="#" class="ys4_player_morebtn">更多信息></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ys4_video">
+                        	<h4 class="ys4_playerh4">视觉欣赏</h4>
+                            <ul class="ys4_video_head clearfix" id="ys4_video_h">
+                            	<li class="ys4_play_li"><a href="#">游戏视频</a></li>
+                                <li><a href="#">游戏截图</a></li>
+                            </ul>
+                            <div class="ys4_video_b clearfix" id="ys4_videoul">
+                            	<div class="ys4_video_div">	
+                                    <ul>
+                                        <li><a href="#"><img src="img/1 (1).jpg" /></a></li>
+                                        <li><a href="#"><img src="img/1 (1).jpg" /></a></li>
+                                        <li><a href="#"><img src="img/1 (1).jpg" /></a></li>
+                                        <li><a href="#"><img src="img/1 (1).jpg" /></a></li>
+                                    </ul>
+                                    <a href="#" class="ys4_player_morebtn">更多信息></a>
+                                </div>
+                                <div>	
+                                    <ul>
+                                        <li><a href="#"><img src="img/1 (2).jpg" /></a></li>
+                                        <li><a href="#"><img src="img/1 (2).jpg" /></a></li>
+                                        <li><a href="#"><img src="img/1 (2).jpg" /></a></li>
+                                        <li><a href="#"><img src="img/1 (2).jpg" /></a></li>
+                                    </ul>
+                                    <a href="#" class="ys4_player_morebtn">更多信息></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <dl class="ys_jkyx">
+            	<dt>健康游戏公告</dt>
+                <dd>
+                	<p>抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</p>
+                    <p>本游戏适合18周岁以上的成年人用户，未满18周岁的未成年用户请在家长的监督下进行游戏。</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="foot_box">
+        	<div class="foot clearfix">
+            	<a href="#" class="foot_l"></a>
+                <a href="#" class="foot_c"></a>
+                <div class="foot_r">
+                	<p>北京畅游时代数码技术有限公司版权所有  Copyright © 2011 ChangYou.com Limited. All rights reserved. 法律声明  |  联系我们</p>
+                    <p>京网文[2011]0260-093号  |  京ICP证：070525号 </p>
+                </div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>
+
+<script>
+	function cl(a){
+		var oYs3_tul = document.getElementById('ys3_tzhiye');
+		var oYs3_tzy = oYs3_tul.getElementsByTagName('li');
+		var oYs3_bdiv = document.getElementById('ys3_bzhiye');
+		var oYs3_bzy = oYs3_bdiv.getElementsByTagName('div');
+		
+		for(var i=0;i<oYs3_tzy.length;i++){
+			oYs3_tzy[i].abc = i;
+			oYs3_tzy[i].onmouseover = function(){
+				for(var i=0;i<oYs3_tzy.length;i++){
+					oYs3_tzy[i] = '';
+				}
+				this.className = a;
+			}
+		}
+	}
+</script>
+
+<script>
+		var oNav_btn = document.getElementById('nav_btn');
+		var oNav_li = oNav_btn.getElementsByTagName('li');
+		var oNav_p = oNav_btn.getElementsByTagName('p');
+		
+		for(var i=0;i<oNav_li.length;i++){
+			if(oNav_li[i].title == '详情'){
+				oNav_li[i].onmouseover = function(){
+					this.id = 'top_hover'
+				}
+				oNav_li[i].onmouseout = function(){
+					this.id = ''
+				}
+			}
+		}
+		
+		var  oBtnBox = document.getElementById('ys3_tzhiye');
+		var aBtn_li= oBtnBox.getElementsByTagName('li');
+		var oBox_div=document.getElementById('ys3_bzhiye');
+		var aShowBox= oBox_div.getElementsByTagName('div');
+		var arr = ['0','-109','-219','-329','-439','-549']
+		for(var i=0; i<aBtn_li.length; i++){
+			aBtn_li[i].index=i;
+			aBtn_li[i].onmouseover = function(){
+				for(var i=0; i<aBtn_li.length; i++){
+					aBtn_li[i].style.backgroundPosition = '';
+					aShowBox[i].className='';
+				}
+				this.style.backgroundPosition=arr[this.index]+'px -471px';
+				aShowBox[this.index].className='ys3_zhiye_hover';
+			}
+		}
+		
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
