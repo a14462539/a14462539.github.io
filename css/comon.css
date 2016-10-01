@@ -289,18 +289,18 @@ html{
 }
 #static div{
 	width: 4rem;
-	height: 4rem;
+	height: 3rem;
 	float: left;
 	margin: .5rem;
 }
 #static div a{
 	width: 4rem;
-	height: 4rem;
+	height: 3rem;
 	float: left;
 }
 #static div img{
 	width: 4rem;
-	height: 4rem;
+	height: 3rem;
 	float: left;
 }
 
