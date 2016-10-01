@@ -1,0 +1,108 @@
+/*ty_boxmain*/
+.ty_boxmain{ width:980px; margin:0px auto; margin-bottom:2px;}
+/*切换分类*/
+.ty_left{ width:200px;margin-bottom:8px;background:#FBF6F0; float:left; }
+.ty_left .tittle{ height:31px; overflow:hidden;}
+.ty_left .tittle img{ vertical-align:middle}
+.data_opboxbg{position:relative; z-index:997; border:1px solid #CCA6A6; border-top:0;  padding:4px 0px; }
+.data_opboxbg .li{ height:27px; line-height:27px; cursor:pointer;background:url(../images/data_opboxbg.gif) no-repeat top }
+.data_opboxbg .cc{background:none }
+.data_opboxbg .li a.tt{padding-left:13px; width:178px; float:left;background:url(../images/data_opboxbgbg.gif) no-repeat right }
+.data_opboxbg .li.cur{height:25px; line-height:25px;  border:1px solid #CCA6A6; background:#FFF;}
+.data_opboxbg .li.cur a.tt{background:#FFF;}
+.data_opboxbg .li div.bg{ display:none; float:right; width:1px; height:1px; zoom:1; position:relative;  z-index:999; }
+.data_opboxbg .li div.bg s{ height:25px;  width:10px;background:#FFF; position:absolute; margin-left:-7px; }
+.data_opboxbg .li.cur div.bg{ display:block;}
+.linkbox{background:#FFF; border:1px solid #CCA6A6;line-height:1.8;padding:8px 0px 4px 5px; width:450px; min-height:430px; height:auto !important; height:430px; position:absolute; top:-45px; left:190px; display:none; padding:7px;}
+.linkbox strong{ width:66px; float:left; text-align:center; margin-top:5px; }
+.linkbox strong a{ font-weight:bold; }
+.linkbox strong a:hover{ color:#DA0A17;}
+.ak_fl_subN{float:left;width:450px;font-weight:lighter;color:#cccccc;}
+.ak_fl_subN_line{border-bottom:1px solid #CCA6A6; }
+.ak_fl_tam{ width:380px; float:left; }
+.ak_fl_tam a{white-space:nowrap; padding:4px 8px; float:left;background:url(../images/line.gif) no-repeat right  }
+.ak_fl_tam a:hover{ color:#DA0A17;}
+/*切换广告*/
+.ty_center{ width:560px; height:310px; overflow:hidden;float:left; margin-left:10px; }
+.ty_center div.pic{width:560px; height:266px; overflow:hidden;}
+.ty_center div.pic span{ width:560px; height:266px;  display:none;}
+.ty_center div.pic span.ad01{ display:block;}
+.ty_center div.zi{ height:44px; background:#000}
+.ty_center div.zi span{ zoom:1;height:40px; background:#333;  float:left; margin:2px 1px 2px 1px ; cursor:pointer;}
+.ty_center div.zi span.ad01{ height:25px; line-height:25px; border:1px solid #FF6600;margin:1px 0px 1px 0px ; overflow:hidden; width:72px; height:40px;}
+
+.ty_center .leftsor{ width:21px; float:left; height:44px; background:url(../images/leftsor.gif) no-repeat; cursor:pointer;}
+.ty_center .rightsor{ width:21px; float:right; height:44px; background:url(../images/leftsor.gif) no-repeat -30px 0px; cursor:pointer;}
+.ty_center .sorad_mid{ width:518px; float:left; overflow:hidden; height:44px;}
+/*介绍*/
+.ty_right{ width:198px; height:308px; overflow:hidden;float:right; border:1px solid #D8D8D8; background:#FAFAFA}
+.ty_right .tit{ height:29px; border-bottom:1px solid #D8D8D8; font-weight:bold; line-height:29px; padding-left:10px; background:url(../images/ty_js.gif) repeat-x;}
+.ty_right .main{ padding:4px;}
+.ty_right .main p{ text-indent:2em; margin-top:15px; line-height:18px;}
+/*ty_boxmain end*/
+/*热门商家藏品*/
+.ty_sjcp{ width:980px; margin:0 auto; overflow:hidden; margin-bottom:10px; }
+.ty_sjcp .tit{ height:33px; overflow:hidden }
+.ty_sjcp .tit h1{ height:33px; float:left;}
+.ty_sjcp .tit span{ height:33px; line-height:33px; overflow:hidden; float:right; margin-right:6px;}
+.ty_sjcp .main{ border:1px solid #D8D8D8; overflow:hidden; float:left}
+.ty_sjcpgg{ width:198px; overflow:hidden; float:left;border-right:1px solid #D8D8D8;}
+.ty_sjcpsp{ width:580px; float:left;  overflow:hidden; margin-top:-1px}
+.ty_sjcpsp .cigsp{width:194px; height:176px;  float:left; text-align:center;background:url(../images/line01.gif) repeat-y left; margin-left:-1px; }
+.ty_sjcpsp .cigspline{ width:194px; height:176px;background:url(../images/line02.gif) repeat-x  0px 0px; padding-top:1px }
+.ty_sjcpsp .cigsp srtong{ width:130px ; height:130px;overflow:hidden; display:block; }
+.ty_sjcpsp .cigsp srtong a{width:130px; height:130px; overflow:hidden; display:table-cell; *display:block; text-align:center;  vertical-align:middle; *font-size:115px;}
+.ty_sjcpsp .cigsp p{ height:22px; line-height:22px; display:block; }
+.ty_sjcpsp .cigsp b{ color:#C80100;}
+.ty_sjcpsp .cigsp b span{ font-size:13px}
+.ty_sjcprig{ width:198px; overflow:hidden; float:left;border-left:1px solid #D8D8D8;}
+/*热门商家藏品 end*/
+.width_gg{ width:980px ; margin:0 auto; margin-bottom:10px;}
+/*店铺*/
+.ty_ff{width:980px ; margin:0 auto; overflow:hidden;}
+.ty_ff .main{width:320px ; height:398px; margin-bottom:10px; cursor:pointer; float:left; margin-right:10px; }
+.ty_ff .mains{ margin-right:0px;}
+.ty_ff .main .ty_fftop{ height:318px; background:#ECECEC;}
+.ty_ff .main .cur{ background:#F57923}
+.ty_ff .main .cur .jic a{ color:#fff}
+.ty_ff .main .ty_fftop .img{ margin:0 auto; width:304px; overflow:hidden; padding-top:8px;}
+.ty_ff .main .ty_fftop a{ float:left; margin-left:1px ; margin-bottom:1px }
+.ty_ff .main .ty_fftop p{ margin-left:13px; line-height:20px;}
+.ty_ff .main .ty_fftop .jic{ margin:9px 13px; overflow:hidden; height:18px; display:block}
+.ty_ff .main .ty_fftop .jic h3{ float:left; width:200px; overflow:hidden;}
+.ty_ff .main .ty_fftop .jic a{ color:#F67821}
+.ty_ff .main .ty_ffbot{border:1px solid #ECECEC; height:78px;}
+.ty_ff .main .ty_ffbot .min{ width:79px; text-align:center; float:left; margin-top:10px;}
+.ty_ff .main .cur{ background:#F57923}
+.ty_ff .main .cur .jic a{ color:#fff}
+.ty_ff .main .cur p { color:#fff}
+.ty_ff .main .ty_fftop .jic span{ float:left; width:90px; overflow:hidden; height:18px;background:url(../images/ty_ffcur.gif) no-repeat;}
+.ty_ff .main .cur .jic span{ background:url(../images/ty_ffcur02.gif) no-repeat;}
+/*收藏*/
+.ty_sc{ width:980px; margin:0 auto; overflow:hidden; margin-bottom:10px;}
+.ty_sc .main{ width:318px; height:198px; border:1px solid #D1D1D1; margin-right:10px; float:left;} 
+.ty_sc .main .tit{ height:25px; margin-top:10px; background:url(../images/ty_sctitbj.gif) repeat-x 0px 12px; text-align:center}
+.ty_sc .main .scmain{ text-align:center; margin-top:7px; }
+.ty_sc .main02{ margin-right:0px;}
+/*底部商标*/
+.ty_sb{ width:978px; margin:0px auto; overflow:hidden; margin-bottom:10px; border:1px solid #DEDEDE}
+.ty_sb img{ float:left;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
