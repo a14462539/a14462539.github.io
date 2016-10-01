@@ -1,0 +1,21 @@
+body .left-box{
+	
+}
+.right-box{
+	width: 88%;
+	margin-left: 12%;
+	padding: 0;
+}
+.nav-top{
+	width: 3rem;
+	height: 3rem;
+	background: #ccc;
+	position: absolute;
+	top: 3.85rem;
+	right: -3rem;
+	font-family: "楷体";
+	font-size: 0.25rem;
+	color: #fff;
+}
+
+

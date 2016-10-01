@@ -1,0 +1,14 @@
+body .left-box{
+	
+}
+.right-box{
+	width: 77%;
+	margin-left: 23%;
+	padding: 0;
+}
+.round{
+	width: 70%;
+	margin-left: 30%;
+	padding: 0;
+    /*display: none;*/
+}

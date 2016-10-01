@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title></title>
+		<math></math>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/comon.css"/>
+		<link rel="stylesheet" href="css/pc.css" media="(max-width: 1200px)">
+	    <link rel="stylesheet" href="css/pad.css" media="(max-width: 640px)"class="olink">
+	    <link rel="stylesheet" href="css/phone.css" media="(max-width: 400px)">
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript">
+			;(function(win,doc){
+				function change(){
+					doc.documentElement.style.fontSize=20*doc.documentElement.clientWidth/320+'px';
+				}
+				change();
+				win.addEventListener('resize',function(){
+					change();
+				},false)
+			})(window,document);
+			
+			function tab(id,sEvent,id2){
+				var aBtn=document.querySelectorAll(id);
+				var aShow=document.querySelectorAll(id2);
+				
+				for(var i=0; i<aBtn.length; i++){
+					;(function(index){
+						aBtn[i][sEvent]=function(){
+							if(id=='.nav li'){
+								var oRound=document.querySelector('.round');
+								oRound.style.display='none';
+								var aTab=document.querySelectorAll('.tab');
+								var aNli=document.querySelectorAll('.nav-top li');
+								for(var k=0; k<aTab.length;k++){
+									aNli[k].classList.remove('color');
+								}
+								for(var j=0; j<aTab.length;j++){
+									aTab[j].classList.remove('show');
+								}
+							}
+							for(var i=0; i<aBtn.length; i++){
+								aBtn[i].classList.remove('on');
+								if(id2){
+									aShow[i].classList.remove('show');
+								}
+							}
+							this.classList.add('on');
+							if(id2){
+								aShow[index].classList.add('show');
+							}
+						}
+					})(i);
+				}
+			};
+			document.addEventListener('DOMContentLoaded',function(){
+				var iNow=0;
+				function change(obj,obj2,obj3,index,btn){
+					var aRound=document.querySelectorAll('.round span');
+					oRound.style.display='block';
+					
+					for(var j=0; j<obj.length;j++){
+						obj[j].classList.remove('show');
+						obj[j].classList.remove('on');
+					}
+					for(var i=0; i<btn.length; i++){
+						obj2[i].classList.remove('show');
+						obj3[i].classList.remove('color');
+					}
+					for(var k=0; k<aRound.length;k++){
+						aRound[k].classList.remove('red');
+					}
+					aRound[index].classList.add('red');
+					obj2[index].classList.add('show');
+					obj3[index].classList.add('color');
+				}
+				var aRound=document.querySelectorAll('.round span');
+				var oPrev=document.querySelector('.prev');
+				var oNext=document.querySelector('.next');
+				var oRound=document.querySelector('.round');
+				oRound.style.display='none';
+				oPrev.onclick=function(){
+					prev(1);
+					change(aBox,aTab,aNli,iNow,aBtn2);
+				}
+				oNext.onclick=function (){
+					next(1);
+					change(aBox,aTab,aNli,iNow,aBtn2);
+				};
+				function prev(num){
+					if(num==1){
+						iNow--;
+					}else{
+						iNow+=num;
+					}
+					if(iNow<0)iNow=aRound.length-1;
+				}
+				function next(num){
+					iNow+=num;
+					if(iNow==aLi.length)iNow=0;
+				}
+				for(var i=0; i<aRound.length;i++){
+					;(function(index){
+						aRound[i].onclick=function(){
+							var dis=index-iNow;
+							if(index>iNow){
+								next(dis);
+								change(aBox,aTab,aNli,index,aBtn2);
+							}else{
+								prev(dis);
+								change(aBox,aTab,aNli,index,aBtn2);
+							}
+						}
+					})(i);
+				}
+				var aP=document.querySelectorAll('.block p');
+				var aLi=document.querySelectorAll('.block');
+				var oLi=document.querySelector('.nav li');
+				var oNav=document.querySelector('.nav-top');
+				var oBox=document.querySelector('.right-box');
+				oLi.onmouseover=oNav.onmouseover=function(){
+					oNav.style.display='block';
+				};
+				oLi.onmouseout=oNav.onmouseout=function(){
+					oNav.style.display='none';
+					for(var i=0; i<aNli.length;i++){
+						aNli[i].classList.remove('on');
+					}
+				};
+				for(var i=0; i<aLi.length; i++){
+					;(function(index){
+						aLi[i].onmouseover=aP[i].onmouseover=function(){
+							for(var i=0; i<aLi.length; i++){
+								aP[i].style.height=0;
+								aP[i].style.display='block';
+							}
+							aP[index].style.height=1.5+'rem';
+							aLi[index].addEventListener('transitionend',function(){
+								if(aP[index].offsetHeight<10){
+									aP[index].style.display='none';
+								}
+							},false);
+						}
+					})(i);
+				}
+				var aTab=document.querySelectorAll('.tab');
+				var aNli=document.querySelectorAll('.nav-top li');
+				var aBtn2=document.querySelectorAll('.btn');
+				var aBox=document.querySelectorAll('.right');
+				var aA=document.querySelectorAll('.click a');
+				for(var i=0; i<aBtn2.length; i++){
+					;(function(index){
+						aNli[i].onclick=function(){
+							change(aBox,aTab,aNli,index,aBtn2);
+						}
+						var aImg=document.querySelectorAll('.Img');
+						var oUl=document.querySelector('.right-nav');
+						var aLi=document.querySelectorAll('.block');
+						var aA=document.querySelectorAll('.block p a');
+						var aP=document.querySelectorAll('.block p');
+						var aS=document.querySelectorAll('.spare');
+						aBtn2[i].onclick=function(){
+							for(var i=0; i<aBtn2.length; i++){
+								aS[i].style.height='5.5rem';
+								aLi[i].style.top=0;
+								aLi[i].style.zIndex=10-i;
+								aS[i].style.zIndex=0;
+								aS[i].innerHTML='您即将离开本页面，前往'+aP[i].innerHTML+'是否继续'+'<br/>'+'<a href="javascript:;" class="on1">继续</a>'+'<a href="javascript:;" class="on2">返回</a>';
+								aS[i].style.display='none';
+								aS[i].style.top=(5.5*i)+1+'rem';
+								aS[i].style.left='1rem';
+							}
+							aLi[index].style.top='-5.5rem';
+							aLi[index].style.transition='1.5s all ease';
+							aS[index].style.display='block';
+							var aChan1=document.querySelectorAll('.spare .on1');
+							var aChan2=document.querySelectorAll('.spare .on2');
+							
+							for(var k=0; k<aChan1.length;k++){
+								aChan1[k].onclick=function(){
+									change(aBox,aTab,aNli,index,aBtn2);
+								}
+							}
+							for(var k=0; k<aChan2.length;k++){
+								aChan2[k].onclick=function(){
+									aLi[index].style.top=0;
+								}
+							}
+						}
+					})(i);
+				}
+				tab('.nav-top li','onmouseover');
+				tab('.nav li','onclick','.right-box');
+				window.addEventListener('resize',function(){
+//					alert(document.documentElement.clientWidth)
+				},false)
+			},false);
+		</script>
+	</head>
+	<body>
+		<div class="left-box">
+			<div>
+				<a href="https://a14462539.github.io/"><img src="images/name.png"></a>
+			</div>
+			<div>
+				
+			</div>
+			<div>
+				<ul class="nav">
+					<li class="on"><a href="javascript:;">作品集</a></li>
+					<li><a href="javascript:;">个人简介</a></li>
+					<li><a href="javascript:;">联系我</a></li>
+				</ul>
+				
+			</div>
+			<ul class="nav-top">
+				
+				<li><a href="javascript:;">CSS静态页面</a></li>
+				<li><a href="javascript:;">JS运动</a></li>
+				<li><a href="javascript:;">JS交互</a></li>
+				<li><a href="javascript:;">JS其它</a></li>
+				<li><a href="javascript:;">HTML5、CSS3</a></li>
+				<li><a href="javascript:;">移动端页面</a></li>
+			</ul>
+		</div>
+		<div class="right-box show right">
+			<div class="right-nav">
+				<div class="block branch1">
+					<p class="btn"><span>CSS静态页面</span></p>
+					<img src="images/weil-hero-xl.jpg" class="Img"/>
+				</div>
+				<div class="spare"></div>
+				<div class="block branch2">
+					<p class="btn"><span>JS运动</span></p>
+					<img src="images/wb-hero-xl.jpg" class="Img"/>
+				</div>
+				<div class="spare"></div>
+				<div class="block branch3">
+					<p class="btn"><span>JS交互</span></p>
+					<img src="images/alo-hero-xl.jpg" class="Img"/>
+				</div>
+				<div class="spare"></div>
+				<div class="block branch4">
+					<p class="btn"><span>JS其它</span></p>
+					<img src="images/scott-hero-xl.jpg" class="Img"/>
+				</div>
+				<div class="spare"></div>
+				<div class="block branch5">
+					<p class="btn"><span>HTML5、CSS3</span></p>
+					<img src="images/sl-hero-xl.jpg" class="Img"/>
+				</div>
+				<div class="spare"></div>
+				<div class="block branch6">
+					<p class="btn"><span>移动端页面</span></p>
+					<img src="images/wp-hero-xl.jpg" class="Img"/>
+				</div>
+				<div class="spare"></div>
+			</div>
+			
+		</div>
+		<div class="right-box right">
+			
+			个人简介
+		</div>
+		<div class="right-box right">
+			联系我
+		</div>
+		<div class="round">
+			<a href="javascript:;" class="prev">prev</a>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<a href="javascript:;" class="next">Next</a>
+		</div>
+		<div class="right-box tab" id="static">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+		</div>
+		<div class="right-box tab">
+			
+			JS运动
+		</div>
+		<div class="right-box tab">
+			
+			JS交互
+		</div>
+		<div class="right-box tab">
+			
+			JS其它
+		</div>
+		<div class="right-box tab">
+			
+			HTML5、CSS3
+		</div>
+		<div class="right-box tab">
+			
+			移动端页面
+		</div>
+	</body>
+</html>

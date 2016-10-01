@@ -1,0 +1,297 @@
+html,body{
+	height: 100%;
+}
+html{
+	font-size: 20px;
+}
+.left-box{
+    width: 12%;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    background: #058bab url(../images/bg.png) repeat-y 0 0;
+    background-size: contain;
+    z-index: 10;
+}
+.left-box div:nth-child(1){
+	width: 100%;
+	height: 2.25rem;
+	background: #058bab ;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	
+}
+.left-box div:nth-child(1) a{
+	width: 1.6rem;
+	height: 1rem;
+	display: block;
+	padding-top: 0.5rem;
+}
+.left-box div:nth-child(1) img{
+	width: 1.5rem;
+	height: 0.25rem;
+}
+.left-box div:nth-child(2){
+	height: 1.6rem;
+	background: #30B4D8;
+}
+.left-box div:nth-child(3){
+	height: 26%;
+	background: #ccc;
+}
+.left-box div:nth-child(3) .nav{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+.left-box div:nth-child(3) .nav li{
+	height: 28%;
+	background: #58595B;
+	margin: 0.1rem 0;
+}
+.left-box div:nth-child(3) .nav .on{
+	background: #ccc;
+}
+.left-box div:nth-child(3) .nav .on a{
+	color: #058BAB;
+}
+
+.left-box div:nth-child(3) a{
+	font-family: "楷体";
+	height: 100%;
+	width: 100%;
+	display: block;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	font-size: 0.25rem;
+	color: #fff;
+	text-align: center;
+	padding-left: 0.2rem;
+}
+.right-box{
+	width: 88%;
+	margin-left: 12%;
+	padding: 0;
+    display: none;
+}
+
+.right-box .right-nav{
+	height: 100%;
+	width: 100%;
+	/*position: absolute;
+	top: 0;
+	left:12% ;*/
+	position: relative;
+	z-index: 1;
+}
+.right-box .right-nav .block{
+	width: 100%;
+	position: relative;
+	top: 0;
+	font-size: .5rem;
+	text-align: center;
+	line-height: 0.5rem;
+}
+.right-box .right-nav .block span{
+	width: calc(100% - 1rem);
+	height: 1.5rem;
+	color: #fff;
+	font-size: .7rem;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	line-height: 1.5rem;
+	padding: 0 0.5rem;
+	cursor:pointer;
+}
+.right-box .right-nav .block p{
+	position: absolute;
+	height: 0;
+	line-height: 1.5rem;
+	width: 50%;
+	transition: 2s all ease; 
+}
+.right-box img{
+	
+	width: 100%;
+	height: 5.5rem;
+}
+.branch1 p{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: left;
+	padding-left: 1rem;
+	-webkit-mask: -webkit-linear-gradient(right,rgba(0,0,0,0) 10%, rgba(0,0,0,1) 80%);
+	background: rgba(255,138,0,0.8);
+}
+.branch2 p{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding-right: 1rem;
+	text-align: right;
+	-webkit-mask: -webkit-linear-gradient(left,rgba(0,0,0,0) 10%, rgba(0,0,0,1) 80%);
+	background: rgba(255,255,0,0.8);
+}
+.branch3 p{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: left;
+	padding-left: 1rem;
+	-webkit-mask: -webkit-linear-gradient(right,rgba(0,0,0,0) 10%, rgba(0,0,0,1) 80%);
+	background: rgba(33,139,167,0.8);
+}
+.branch4 p{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding-right: 1rem;
+	text-align: right;
+	-webkit-mask: -webkit-linear-gradient(left,rgba(0,0,0,0) 10%, rgba(0,0,0,1) 80%);
+	background: rgba(140,140,140,0.8);
+}
+.branch5 p{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: left;
+	padding-left: 1rem;
+	-webkit-mask: -webkit-linear-gradient(right,rgba(0,0,0,0) 10%, rgba(0,0,0,1) 80%);
+	background: rgba(33,139,167,0.8);
+}
+.branch6 p{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding-right: 1rem;
+	text-align: right;
+	-webkit-mask: -webkit-linear-gradient(left,rgba(0,0,0,0) 10%, rgba(0,0,0,1) 80%);
+	background: rgba(255,138,0,0.8);
+}
+
+.show{
+	display: block;
+}
+
+.spare{
+	display: none;
+	width: 88%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 0.5rem;
+	height: 5.5rem;
+}
+.spare a{
+	float: left;
+	font-size: 0.5rem;
+	margin-top: 1rem;
+	text-align: center;
+	color: #fff;
+	width: 3rem;
+	height: 1rem;
+	line-height: 1rem;
+	margin-left: 1rem;
+	background: #FF8A00;
+}
+.spare a:hover{
+	color: #FFCC99;
+}
+.spare a:nth-child(odd){
+	background: #666;
+}
+.spare span{
+	color: #FFCC99;
+}
+
+.nav-top{
+	width: 2.2rem;
+	height: 3rem;
+	background: #ccc;
+	position: absolute;
+	top: 3.85rem;
+	right: -2.2rem;
+	font-family: "楷体";
+	font-size: 0.25rem;
+	color: #fff;
+	border-bottom: 0.55rem solid #ccc;
+	display: none;
+}
+.nav-top li a{
+	font-family: "楷体";
+	height: 100%;
+	width: calc(100% - 0.2rem);
+	display: block;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	font-size: 0.25rem;
+	color: #fff;
+	text-align: center;
+	padding-left: 0.2rem;
+}
+.nav-top li{
+	height: 15.6%;
+	background: #058BAB;
+	margin-top: 0.1rem;
+}
+.nav-top .on{
+	background: #58595B;
+}
+.nav-top .color{
+	background: #fff;
+}
+.nav-top .color a{
+	color: #058BAB;
+}
+.tab{
+	width: 88%;
+}
+.round{
+	height: 1.5rem;
+	width: 80%;
+	margin-left: 20%;
+	padding: 0;
+    /*display: none;*/
+}
+.round span{
+	width: .2rem;
+	height: .2rem;
+	background: #ccc;
+	float: left;
+	border-radius: 50%;
+	cursor:pointer;
+	margin-top: 0.65rem;
+	margin-left: 0.2rem;
+}
+.round a{
+	color: #000;
+	float: left;
+	font-size: .35rem;
+	margin-top: 0.55rem;
+	margin-left: .8rem;
+	margin-right: .8rem;
+}
+.round a:hover{
+	color:#058BAB ;
+}
+.round .red{
+	background: #058BAB;
+}
+#static{
+	width: calc(100% - 3rem);
+	height: 100%;
+	padding-left: 1rem;
+}
+#static div{
+	width: 3rem;
+	height: 3rem;
+	border: 1px solid #000;
+	float: left;
+	margin: 1rem;
+}
+
